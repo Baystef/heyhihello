@@ -8,7 +8,10 @@ import type { AppProps /*, AppContext */ } from 'next/app'
 function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 1500, 
+      easing: 'ease',
+    });
   }, [])
 
   return (
